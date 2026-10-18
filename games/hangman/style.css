@@ -1,0 +1,17 @@
+.hm-svg { width: 150px; height: auto; }
+.hm-svg [id^="p"] { display: none; }
+.hm-svg [id^="p"].show { display: block; }
+.hm-hint { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--cyan); min-height: 16px; }
+.hm-word { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; min-height: 44px; max-width: 94vw; }
+.hm-letter {
+  width: 28px; height: 40px; border-bottom: 3px solid var(--text-dim); display: flex; align-items: flex-end; justify-content: center;
+  font-family: var(--font-display); font-size: 32px; line-height: 1.1; text-transform: uppercase;
+}
+.hm-letter.missed { color: var(--pink); border-color: var(--pink); }
+.hm-kb { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; width: min(96vw, 400px); }
+.hm-key {
+  width: calc((100% - 6 * 6px) / 7); height: 44px; border: none; border-radius: 6px; cursor: pointer;
+  background: #232838; color: var(--text); font-family: var(--font-body); font-weight: 700; font-size: 15px; text-transform: uppercase;
+}
+.hm-key.good { background: #1f9d55; } .hm-key.bad { background: #12161F; color: var(--text-dim); }
+.hm-key:disabled { cursor: default; }
