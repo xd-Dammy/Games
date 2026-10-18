@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#0B0E14">
+<title>XD_Arcade — Game Hub</title>
+<meta name="description" content="Puzzles and quick arcade games, all in one hub. Play offline, no install required.">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="assets/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="scanline-overlay" aria-hidden="true"></div>
+
+<header class="hub-header">
+  <div class="logo-mark">
+    <span class="logo-bracket">[</span>XD_ARCADE<span class="logo-bracket">]</span>
+  </div>
+  <a href="scores/index.html" class="scores-link" aria-label="Total score">🏆 Scores</a>
+  <div class="header-status" id="connectionStatus">
+    <span class="status-dot"></span>
+    <span class="status-text">Online</span>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1 class="hero-title">Pick a cabinet.<br>Press start.</h1>
+    <p class="hero-sub">Twenty-three games. A 3D run is on the way. Works offline once installed.</p>
+  </section>
+
+  <h2 class="section-title">Puzzles</h2>
+  <section class="cabinet-grid">
+
+    <a href="games/sudoku/index.html" class="cabinet" data-game="sudoku">
+      <div class="cabinet-marquee">
+        <span class="marquee-label">01</span>
+        <span class="marquee-name">Sudoku</span>
+      </div>
+      <div class="cabinet-screen">
+        <div class="sudoku-preview">
+          <span>5</span><span></span><span>3</span><span></span>
+          <span></span><span>7</span><span></span><span>1</span>
+          <span>9</span><span></span><span>4</span><span></span>
+          <span></span><span>2</span><span></span><span>8</span>
+        </div>
+      </div>
+      <div class="cabinet-footer">3 difficulties</div>
+    </a>
+
+    <a href="games/minesweeper/index.html" class="cabinet" data-game="minesweeper">
+      <div class="cabinet-marquee">
+        <span class="marquee-label">02</span>
+        <span class="marquee-name">Minesweeper</span>
+      </div>
+      <div class="cabinet-screen">
+        <div class="mine-preview">
+          <span class="o">1</span><span class="o">1</span><span></span><span></span>
+          <span class="o">1</span><span class="f">🚩</span><span></span><span class="o">2</span>
+          <span class="o"></span><span></span><span class="o">1</span><span></span>
+          <span class="o"></span><span class="o">1</span><span></span><span></span>
+        </div>
+      </div>
+      <div class="cabinet-footer">3 sizes · flag the mines</div>
+    </a>
+
+    <a href="games/wordguess/index.html" class="cabinet" data-game="wordguess">
+      <div class="cabinet-marquee">
+        <span class="marquee-label">03</span>
+        <span class="marquee-name">Word Guess</span>
+      </div>
+      <div class="cabinet-screen">
+        <div class="word-preview">
+          <span class="g">C</span><span class="y">R</span><span>A</span><span>N</span><span class="g">E</span>
+          <span class="g">C</span><span class="g">L</span><span class="g">O</span><span class="g">U</span><span class="g">D</span>
+        </div>
+      </div>
+      <div class="cabinet-footer">6 tries · 5 letters</div>
+    </a>
+
+    <a href="games/sliding/index.html" class="cabinet" data-game="sliding">
+      <div class="cabinet-marquee">
+        <span class="marquee-label">04</span>
+        <span class="marquee-name">Sliding Puzzle</span>
+      </div>
+      <div class="cabinet-screen">
+        <div class="slide-preview">
+          <span>1</span><span>2</span><span>3</span>
+          <span>4</span><span></span><span>6</span>
+          <span>7</span><span>5</span><span>8</span>
+        </div>
+      </div>
+      <div class="cabinet-footer">3×3, 4×4, 5×5</div>
+    </a>
+
+    <a href="games/lightsout/index.html" class="cabinet" data-game="lightsout">
+      <div class="cabinet-marquee">
+        <span class="marquee-label">05</span>
+        <span class="marquee-name">Lights Out</span>
+      </div>
+      <div class="cabinet-screen">
+        <div class="lights-preview">
+          <span class="on"></span><span></span><span class="on"></span>
+          <span></span><span class="on"></span><span></span>
+          <span class="on"></span><span></span><span class="on"></span>
+        </div>
+      </div>
+      <div class="cabinet-footer">Endless levels</div>
+    </a>
+
+    <a href="games/memory/index.html" class="cabinet" data-game="memory">
+      <div class="cabinet-marquee">
+        <span class="marquee-label">06</span>
+        <span class="marquee-name">Memory Match</span>
+      </div>
+      <div class="cabinet-screen">
+        <div class="memory-preview">
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="cabinet-footer">Beat the clock</div>
+    </a>
+
+    <a href="games/2048/index.html" class="cabinet" data-game="2048">
+      <div class="cabinet-marquee">
+        <span class="marquee-label">07</span>
+        <span class="marquee-name">2048</span>
+      </div>
+      <div class="cabinet-screen">
+        <div class="tile-preview">
+          <span class="t2">2</span><span class="t4">4</span>
+          <span class="t8">8</span><span class="t16">16</span>
+        </div>
+      </div>
+      <div class="cabinet-footer">Merge to win</div>
+    </a>
+
+    <a href="games/hangman/index.html" class="cabinet" data-game="hangman">
+      <div class="cabinet-marquee">
+        <span class="marquee-label">08</span>
+        <span class="marquee-name">Hangman</span>
+      </div>
+      <div class="cabinet-screen">
+        <div class="hang-preview"><span>H</span><span>A</span><span class="u"></span><span>G</span></div>
+      </div>
+      <div class="cabinet-footer">Guess the word</div>
+    </a>
+
+    <a href="games/mathrush/index.html" class="cabinet" data-game="mathrush">
+      <div class="cabinet-marquee">
+        <span class="marquee-label">09</span>
+        <span class="marquee-name">Math Rush</span>
+      </div>
+      <div class="cabinet-screen">
+        <div class="math-preview">7 × 8<br><b>= 56</b></div>
+      </div>
+      <div class="cabinet-footer">30 seconds · 3 levels</div>
+    </a>
+
+    <a href="games/riddles/index.html" class="cabinet" data-game="riddles">
+      <div class="cabinet-marquee">
+        <span class="marquee-label">10</span>
+        <span class="marquee-name">Riddles &amp; Tricks</span>
+      </div>
+      <div class="cabinet-screen">
+        <div class="riddle-preview">?</div>
+      </div>
+      <div class="cabinet-footer">Riddles · trick questions</div>
+    </a>
+
+  </section>
+
+  <h2 class="section-title">Arcade</h2>
+  <section class="cabinet-grid">
+
+    <a href="games/snake/index.html" class="cabinet" data-game="snake">
+      <div class="cabinet-marquee">
+        <span class="marquee-label">11</span>
+        <span class="marquee-name">Snake</span>
+      </div>
+      <div class="cabinet-screen">
+        <div class="snake-preview" aria-hidden="true"></div>
+      </div>
+      <div class="cabinet-footer">High score chase</div>
+    </a>
+
+    <a href="games/simon/index.html" class="cabinet" data-game="simon">
+      <div class="cabinet-marquee">
+        <span class="marquee-label">12</span>
+        <span class="marquee-name">Simon</span>
+      </div>
+      <div class="cabinet-screen">
+        <div class="simon-preview"><span></span><span></span><span></span><span></span></div>
+      </div>
+      <div class="cabinet-footer">Repeat the pattern</div>
+    </a>
+
+    <a href="games/whack/index.html" class="cabinet" data-game="whack">
+      <div class="cabinet-marquee">
+        <span class="marquee-label">13</span>
+        <span class="marquee-name">Whack-a-Mole</span>
+      </div>
+      <div class="cabinet-screen">
+        <div class="whack-preview"><span></span><span class="up"></span><span></span></div>
+      </div>
+      <div class="cabinet-footer">30 seconds · beat your best</div>
+    </a>
+
+    <a href="games/tictactoe/index.html" class="cabinet" data-game="tictactoe">
+      <div class="cabinet-marquee">
+        <span class="marquee-label">14</span>
+        <span class="marquee-name">Tic-Tac-Toe</span>
+      </div>
+      <div class="cabinet-screen">
+        <div class="ttt-preview">
+          <span>X</span><span></span><span>O</span>
+          <span></span><span>X</span><span></span>
+          <span>O</span><span></span><span>X</span>
+        </div>
+      </div>
+      <div class="cabinet-footer">2 players · vs CPU</div>
+    </a>
+
+    <a href="games/connect4/index.html" class="cabinet" data-game="connect4">
+      <div class="cabinet-marquee">
+        <span class="marquee-label">15</span>
+        <span class="marquee-name">Connect Four</span>
+      </div>
+      <div class="cabinet-screen">
+        <div class="c4-preview">
+          <span></span><span></span><span></span><span></span>
+          <span></span><span class="a"></span><span class="b"></span><span></span>
+          <span class="a"></span><span class="b"></span><span class="a"></span><span class="b"></span>
+        </div>
+      </div>
+      <div class="cabinet-footer">2 players · vs CPU</div>
+    </a>
+
+    <a href="games/flap/index.html" class="cabinet" data-game="flap">
+      <div class="cabinet-marquee">
+        <span class="marquee-label">16</span>
+        <span class="marquee-name">Flap</span>
+      </div>
+      <div class="cabinet-screen">
+        <div class="flap-preview"><i class="pp t"></i><i class="pp b"></i><i class="bird"></i></div>
+      </div>
+      <div class="cabinet-footer">Tap to fly</div>
+    </a>
+
+    <a href="games/breakout/index.html" class="cabinet" data-game="breakout">
+      <div class="cabinet-marquee">
+        <span class="marquee-label">17</span>
+        <span class="marquee-name">Breakout</span>
+      </div>
+      <div class="cabinet-screen">
+        <div class="bo-preview"><div class="bricks"><span></span><span></span><span></span><span></span><span></span><span></span></div><i class="ball"></i><i class="pad"></i></div>
+      </div>
+      <div class="cabinet-footer">Smash the bricks</div>
+    </a>
+
+    <a href="games/blocks/index.html" class="cabinet" data-game="blocks">
+      <div class="cabinet-marquee">
+        <span class="marquee-label">18</span>
+        <span class="marquee-name">Blocks</span>
+      </div>
+      <div class="cabinet-screen">
+        <div class="bl-preview"><span class="a"></span><span class="a"></span><span class="a"></span><span></span><span></span><span class="b"></span><span class="c"></span><span class="c"></span><span class="b"></span><span class="b"></span><span class="c"></span><span class="d"></span></div>
+      </div>
+      <div class="cabinet-footer">Stack and clear lines</div>
+    </a>
+
+    <a href="games/rps/index.html" class="cabinet" data-game="rps">
+      <div class="cabinet-marquee">
+        <span class="marquee-label">19</span>
+        <span class="marquee-name">Rock Paper Scissors</span>
+      </div>
+      <div class="cabinet-screen">
+        <div class="rps-preview">🪨 📄 ✂️</div>
+      </div>
+      <div class="cabinet-footer">Beat the CPU</div>
+    </a>
+
+    <a href="games/reflex/index.html" class="cabinet" data-game="reflex">
+      <div class="cabinet-marquee">
+        <span class="marquee-label">20</span>
+        <span class="marquee-name">Reflex</span>
+      </div>
+      <div class="cabinet-screen">
+        <div class="rx-preview"><span></span></div>
+      </div>
+      <div class="cabinet-footer">How fast are you?</div>
+    </a>
+
+    <a href="games/pong/index.html" class="cabinet" data-game="pong">
+      <div class="cabinet-marquee">
+        <span class="marquee-label">21</span>
+        <span class="marquee-name">Pong</span>
+      </div>
+      <div class="cabinet-screen">
+        <div class="pong-preview"><i class="p t"></i><i class="ball"></i><i class="p b"></i></div>
+      </div>
+      <div class="cabinet-footer">First to 7</div>
+    </a>
+
+  </section>
+
+    <h2 class="section-title">Board games</h2>
+  <section class="cabinet-grid">
+
+    <a href="games/checkers/index.html" class="cabinet" data-game="checkers">
+      <div class="cabinet-marquee">
+        <span class="marquee-label">22</span>
+        <span class="marquee-name">Checkers</span>
+      </div>
+      <div class="cabinet-screen">
+        <div class="ck-preview"><span></span><span class="r"></span><span></span><span class="b"></span><span class="r"></span><span></span><span class="b"></span><span></span><span></span></div>
+      </div>
+      <div class="cabinet-footer">2 players · vs CPU</div>
+    </a>
+
+    <a href="games/chess/index.html" class="cabinet" data-game="chess">
+      <div class="cabinet-marquee">
+        <span class="marquee-label">23</span>
+        <span class="marquee-name">Chess</span>
+      </div>
+      <div class="cabinet-screen">
+        <div class="chess-preview">♞</div>
+      </div>
+      <div class="cabinet-footer">Full rules · vs CPU</div>
+    </a>
+
+  </section>
+
+<h2 class="section-title">Coming soon</h2>
+  <section class="cabinet-grid">
+
+    <div class="cabinet cabinet-featured cabinet-soon" data-game="runner3d" aria-disabled="true">
+      <div class="cabinet-marquee">
+        <span class="marquee-label">··</span>
+        <span class="marquee-name">Campus Dash</span>
+      </div>
+      <div class="cabinet-screen cabinet-screen-3d">
+        <div class="badge-3d">3D</div>
+        <span class="soon-ribbon">Coming soon</span>
+      </div>
+      <div class="cabinet-footer">3D platformer · being rebuilt</div>
+    </div>
+
+  </section>
+</main>
+
+<footer class="hub-footer">
+  <button id="installBtn" class="install-btn" hidden>Install XD_Arcade</button>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
