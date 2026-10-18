@@ -1,0 +1,17 @@
+.wk-board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; width: min(88vw, 340px); user-select: none; -webkit-user-select: none; }
+.wk-hole {
+  position: relative; aspect-ratio: 1/1; border: none; padding: 0; cursor: pointer; overflow: hidden;
+  background: radial-gradient(ellipse at 50% 78%, #000 0 34%, transparent 35%), #12161F;
+  border-radius: 16px; box-shadow: inset 0 0 0 1px var(--border);
+}
+.wk-mole {
+  position: absolute; left: 0; right: 0; bottom: 6%; text-align: center; font-size: clamp(40px, 13vw, 62px); line-height: 1;
+  transform: translateY(110%); transition: transform .09s ease-out; pointer-events: none;
+}
+.wk-hole.up .wk-mole { transform: translateY(0); }
+.wk-hole.gold .wk-mole { filter: drop-shadow(0 0 10px var(--yellow)); }
+.wk-hole.hit { background: radial-gradient(ellipse at 50% 78%, #000 0 34%, transparent 35%), #1f3a2a; }
+.wk-hole.boom { background: radial-gradient(ellipse at 50% 78%, #000 0 34%, transparent 35%), #4a1522; }
+.wk-pop { position: absolute; left: 0; right: 0; top: 10%; text-align: center; font-family: var(--font-display); font-size: 26px; pointer-events: none; animation: wkpop .6s ease-out forwards; }
+.wk-pop.plus { color: #4ade80; } .wk-pop.minus { color: var(--pink); }
+@keyframes wkpop { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(-26px); } }
