@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0B0E14">
+<title>Campus Dash — Arcadia</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="game-body runner-body">
+
+<header class="game-header runner-header">
+  <a href="../../index.html" class="back-link">&larr; Arcadia</a>
+  <h1 class="game-title">Campus Dash</h1>
+</header>
+
+<main class="runner-main">
+  <div id="hud" class="runner-hud">
+    <span class="hud-item">Checkpoint <span id="checkpointVal">1</span>/<span id="checkpointTotal">4</span></span>
+    <span class="hud-item" id="timeVal">0:00</span>
+  </div>
+
+  <div id="canvasWrap" class="canvas-3d-wrap">
+    <canvas id="gameCanvas"></canvas>
+
+    <div class="overlay" id="startOverlay">
+      <p class="overlay-title">Campus Dash</p>
+      <p class="overlay-msg">Race across campus, jump the gaps, reach the gate.<br>WASD / arrows to move, Space to jump.</p>
+      <button class="reset-btn" id="startBtn">Start</button>
+    </div>
+
+    <div class="overlay hidden" id="endOverlay">
+      <p class="overlay-title" id="endTitle">You made it!</p>
+      <p class="overlay-msg" id="endMsg"></p>
+      <button class="reset-btn" id="restartBtn">Play again</button>
+    </div>
+  </div>
+
+  <div class="touch-controls-3d" id="touchControls3d">
+    <div class="move-pad" id="movePad">
+      <button class="pad-btn" id="btnFwd" aria-label="Forward">&uarr;</button>
+      <div class="pad-row">
+        <button class="pad-btn" id="btnLeft" aria-label="Left">&larr;</button>
+        <button class="pad-btn" id="btnBack" aria-label="Back">&darr;</button>
+        <button class="pad-btn" id="btnRight" aria-label="Right">&rarr;</button>
+      </div>
+    </div>
+    <button class="pad-btn jump-btn" id="btnJump" aria-label="Jump">JUMP</button>
+  </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="physics.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
