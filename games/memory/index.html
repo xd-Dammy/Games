@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#0B0E14">
+<title>Memory Match — XD_Arcade</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="game-body">
+
+<header class="game-header">
+  <a href="../../index.html" class="back-link">&larr; XD_Arcade</a>
+  <h1 class="game-title">Memory Match</h1>
+  <div class="mode-toggle">
+    <button class="mode-btn active" data-size="4">4x4</button>
+    <button class="mode-btn" data-size="6">6x6</button>
+  </div>
+</header>
+
+<main class="game-main">
+  <div class="scoreboard">
+    <div class="score-item">
+      <span class="score-label">Time</span>
+      <span class="score-val" id="timeVal">0:00</span>
+    </div>
+    <div class="score-item">
+      <span class="score-label">Moves</span>
+      <span class="score-val" id="movesVal">0</span>
+    </div>
+    <div class="score-item">
+      <span class="score-label">Best</span>
+      <span class="score-val" id="bestVal">—</span>
+    </div>
+  </div>
+
+  <div class="memory-board" id="memoryBoard"></div>
+
+  <p class="turn-indicator" id="statusMsg">Flip two cards to find a match</p>
+
+  <button class="reset-btn" id="resetBtn">New game</button>
+</main>
+
+<script src="game.js"></script>
+</body>
+</html>
