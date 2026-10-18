@@ -1,0 +1,11 @@
+.rx-pad {
+  width: min(92vw, 360px); height: 280px; border: none; border-radius: 16px; cursor: pointer; color: #fff;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+  font-family: var(--font-display); font-size: 40px; letter-spacing: 1px; user-select: none; -webkit-user-select: none; touch-action: manipulation;
+}
+.rx-pad small { font-family: var(--font-body); font-size: 13px; opacity: .8; letter-spacing: 0; }
+.rx-pad.wait { background: #232838; }
+.rx-pad.ready { background: #c0392b; }
+.rx-pad.go { background: #1f9d55; }
+.rx-pad.early { background: #8e5a10; }
+.rx-pad.result { background: #1d3a44; }
