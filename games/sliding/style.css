@@ -1,0 +1,13 @@
+.sl-board {
+  position: relative; width: min(92vw, 380px); aspect-ratio: 1/1;
+  background: #070A10; border: 1px solid var(--border); border-radius: 10px; padding: 0;
+}
+.tile {
+  position: absolute; display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); color: var(--text); border: none; cursor: pointer;
+  background: linear-gradient(160deg, #1d2436, #151a28); border-radius: 8px;
+  box-shadow: inset 0 0 0 1px var(--border);
+  transition: left .14s ease, top .14s ease, background .2s ease;
+}
+.tile.home { background: linear-gradient(160deg, #1d3a44, #15262e); box-shadow: inset 0 0 0 1px rgba(61,220,255,.45); color: var(--cyan); }
+.sl-board.solved .tile { background: linear-gradient(160deg, #3a3210, #2a2410); box-shadow: inset 0 0 0 1px var(--yellow); color: var(--yellow); }
