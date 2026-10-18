@@ -1,0 +1,10 @@
+.bl-row { display: flex; gap: 14px; align-items: flex-start; justify-content: center; }
+.bl-canvas { width: min(56vw, 220px); aspect-ratio: 1/2; height: auto; background: #070A10; border: 1px solid var(--border); border-radius: 8px; touch-action: none; }
+.bl-side { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.bl-next { width: 80px; height: 80px; background: #070A10; border: 1px solid var(--border); border-radius: 8px; }
+.bl-pad { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; width: min(94vw, 360px); }
+.bl-pad button {
+  height: 52px; border: 1px solid var(--border); border-radius: 10px; background: var(--bg-raised);
+  color: var(--text); font-size: 22px; cursor: pointer; user-select: none; -webkit-user-select: none;
+}
+.bl-pad button:active { background: #232838; border-color: var(--pink); }
