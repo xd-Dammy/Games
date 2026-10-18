@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#0B0E14">
+<title>Sudoku — XD_Arcade</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="game-body">
+
+<header class="game-header">
+  <a href="../../index.html" class="back-link">&larr; XD_Arcade</a>
+  <h1 class="game-title">Sudoku</h1>
+  <div class="mode-toggle">
+    <button class="mode-btn active" data-diff="easy">Easy</button>
+    <button class="mode-btn" data-diff="medium">Medium</button>
+    <button class="mode-btn" data-diff="hard">Hard</button>
+  </div>
+</header>
+
+<main class="game-main">
+  <div class="scoreboard">
+    <div class="score-item">
+      <span class="score-label">Mistakes</span>
+      <span class="score-val" id="mistakesVal">0</span>
+    </div>
+    <div class="score-item">
+      <span class="score-label">Time</span>
+      <span class="score-val" id="timeVal">0:00</span>
+    </div>
+  </div>
+
+  <div class="sudoku-wrap">
+    <div class="sudoku-board" id="sudokuBoard"></div>
+    <div class="overlay hidden" id="overlay">
+      <p class="overlay-msg" id="overlayMsg"></p>
+      <button class="reset-btn" id="startBtn">New game</button>
+    </div>
+  </div>
+
+  <div class="numpad" id="numpad">
+    <button class="num-btn" data-num="1">1</button>
+    <button class="num-btn" data-num="2">2</button>
+    <button class="num-btn" data-num="3">3</button>
+    <button class="num-btn" data-num="4">4</button>
+    <button class="num-btn" data-num="5">5</button>
+    <button class="num-btn" data-num="6">6</button>
+    <button class="num-btn" data-num="7">7</button>
+    <button class="num-btn" data-num="8">8</button>
+    <button class="num-btn" data-num="9">9</button>
+    <button class="num-btn erase-btn" data-num="0">Erase</button>
+  </div>
+
+  <button class="reset-btn" id="newGameBtn">New game</button>
+</main>
+
+<script src="game.js"></script>
+</body>
+</html>
