@@ -1,0 +1,16 @@
+.c4-a { color: var(--pink); } .c4-b { color: #c9ccd6; }
+.ch-board { display: grid; grid-template-columns: repeat(8, 1fr); width: min(96vw, 440px); aspect-ratio: 1/1; border: 3px solid #2a3040; border-radius: 8px; overflow: hidden; user-select: none; -webkit-user-select: none; }
+.ch-sq { position: relative; border: none; padding: 0; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: clamp(26px, 9vw, 46px); line-height: 1; }
+.ch-sq.l { background: #d9c7a3; } .ch-sq.d { background: #7a8f6a; }
+.ch-sq.sel { background: #e8d86a !important; }
+.ch-sq.last.l { background: #e6dc8f; } .ch-sq.last.d { background: #a9b85a; }
+.ch-sq.check { background: radial-gradient(circle, #ff3d6e 0, #ff3d6e 35%, transparent 75%), #7a8f6a; }
+.ch-sq.dot::after { content: ''; position: absolute; width: 28%; height: 28%; border-radius: 50%; background: rgba(20,30,60,.45); }
+.ch-sq.cap::after { content: ''; position: absolute; inset: 4%; border-radius: 50%; border: 4px solid rgba(20,30,60,.45); background: none; width: auto; height: auto; }
+.ch-piece { pointer-events: none; font-family: "Segoe UI Symbol", "Noto Sans Symbols 2", "DejaVu Sans", sans-serif; }
+.ch-piece.w { color: #fff; text-shadow: 0 0 2px #000, 0 0 2px #000, 0 1px 3px #000; }
+.ch-piece.b { color: #15181f; text-shadow: 0 0 1px #fff; }
+.ch-cap { min-height: 22px; font-size: 18px; letter-spacing: 1px; color: var(--text-dim); width: min(96vw, 440px); text-align: left; }
+.ch-promo { display: flex; gap: 10px; }
+.ch-promo[hidden] { display: none; }
+.ch-promo button { width: 56px; height: 56px; font-size: 34px; border-radius: 10px; border: 1px solid var(--cyan); background: var(--bg-raised); color: var(--text); cursor: pointer; }
