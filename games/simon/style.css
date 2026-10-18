@@ -1,0 +1,17 @@
+.simon-wrap { position: relative; width: min(86vw, 340px); aspect-ratio: 1/1; }
+.simon-pads { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 10px; width: 100%; height: 100%; }
+.pad { border: none; cursor: pointer; opacity: .45; transition: opacity .08s ease, filter .08s ease, transform .08s ease; }
+.pad-0 { background: #22c55e; border-radius: 100% 8px 8px 8px; }
+.pad-1 { background: var(--pink); border-radius: 8px 100% 8px 8px; }
+.pad-2 { background: var(--yellow); border-radius: 8px 8px 8px 100%; }
+.pad-3 { background: var(--cyan); border-radius: 8px 8px 100% 8px; }
+.pad.lit { opacity: 1; filter: brightness(1.25) drop-shadow(0 0 14px currentColor); transform: scale(1.02); }
+.pad-0.lit { color: #22c55e; } .pad-1.lit { color: var(--pink); } .pad-2.lit { color: var(--yellow); } .pad-3.lit { color: var(--cyan); }
+.simon-pads.locked .pad { cursor: default; }
+.simon-center {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 34%; aspect-ratio: 1/1; border-radius: 50%; border: 4px solid var(--bg);
+  background: var(--bg-raised); color: var(--text); font-family: var(--font-display);
+  font-size: 22px; letter-spacing: 1px; cursor: pointer; box-shadow: 0 0 0 2px var(--border);
+}
+.simon-center:disabled { color: var(--text-dim); cursor: default; }
