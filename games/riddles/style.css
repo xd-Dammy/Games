@@ -1,0 +1,12 @@
+.rd-card { width: min(92vw, 420px); background: var(--bg-raised); border: 1px solid var(--border); border-radius: 14px; padding: 20px 18px; display: flex; flex-direction: column; gap: 12px; }
+.rd-tag { align-self: flex-start; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--cyan); border: 1px solid var(--cyan); padding: 3px 10px; border-radius: 20px; }
+.rd-tag.trick { color: var(--yellow); border-color: var(--yellow); }
+.rd-q { font-size: 19px; line-height: 1.45; font-weight: 500; }
+.rd-hint { font-size: 14px; color: var(--yellow); }
+.rd-form { display: flex; gap: 8px; width: min(92vw, 420px); }
+.rd-input { flex: 1; min-width: 0; font-family: var(--font-body); font-size: 16px; padding: 12px 14px; background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 8px; outline: none; }
+.rd-input:focus { border-color: var(--cyan); }
+.rd-input.bad { border-color: var(--pink); animation: rdshake .3s ease; }
+.rd-input.good { border-color: #4ade80; }
+@keyframes rdshake { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
+.rd-form.done { display: none; }
