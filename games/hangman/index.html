@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0B0E14">
+<title>Hangman — XD_Arcade</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/game-shared.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="game-body">
+<header class="game-header">
+  <a href="../../index.html" class="back-link">&larr; XD_Arcade</a>
+  <h1 class="game-title">Hangman</h1>
+</header>
+<main class="game-main">
+  <div class="scoreboard">
+    <div class="score-item"><span class="score-label">Wins</span><span class="score-val" id="winsVal">0</span></div>
+    <div class="score-item"><span class="score-label">Streak</span><span class="score-val" id="streakVal">0</span></div>
+    <div class="score-item"><span class="score-label">Lives</span><span class="score-val" id="livesVal">6</span></div>
+  </div>
+  <svg class="hm-svg" id="gallows" viewBox="0 0 120 130" aria-hidden="true">
+    <g stroke="#8A8F9C" stroke-width="4" fill="none" stroke-linecap="round">
+      <line x1="10" y1="124" x2="80" y2="124"/><line x1="30" y1="124" x2="30" y2="10"/>
+      <line x1="30" y1="10" x2="85" y2="10"/><line x1="85" y1="10" x2="85" y2="24"/>
+    </g>
+    <g stroke="#FF3D6E" stroke-width="4" fill="none" stroke-linecap="round">
+      <circle id="p0" cx="85" cy="35" r="11"/>
+      <line id="p1" x1="85" y1="46" x2="85" y2="82"/>
+      <line id="p2" x1="85" y1="55" x2="68" y2="70"/>
+      <line id="p3" x1="85" y1="55" x2="102" y2="70"/>
+      <line id="p4" x1="85" y1="82" x2="70" y2="105"/>
+      <line id="p5" x1="85" y1="82" x2="100" y2="105"/>
+    </g>
+  </svg>
+  <p class="hm-hint" id="hintMsg"></p>
+  <div class="hm-word" id="wordEl"></div>
+  <p class="turn-indicator" id="statusMsg">Guess the word</p>
+  <div class="wg-kb hm-kb" id="kb"></div>
+  <button class="reset-btn" id="resetBtn">New word</button>
+</main>
+<script src="game.js"></script>
+</body>
+</html>
