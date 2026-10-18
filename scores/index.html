@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0B0E14">
+<title>Total Score — XD_Arcade</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/game-shared.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="game-body">
+<header class="game-header">
+  <a href="../index.html" class="back-link">&larr; XD_Arcade</a>
+  <h1 class="game-title">Total Score</h1>
+</header>
+<main class="game-main sc-main">
+  <div class="scoreboard">
+    <div class="score-item"><span class="score-label">Games scored</span><span class="score-val" id="playedVal">0</span></div>
+    <div class="score-item"><span class="score-label">Out of</span><span class="score-val" id="totalVal">0</span></div>
+    <div class="score-item"><span class="score-label">Total wins</span><span class="score-val" id="winsVal">0</span></div>
+  </div>
+  <div class="sc-bar"><div class="sc-fill" id="fill"></div></div>
+  <p class="turn-indicator" id="rankMsg"></p>
+  <div class="sc-list" id="list"></div>
+  <button class="reset-btn" id="resetAll">Reset all scores</button>
+</main>
+<script src="game.js"></script>
+</body>
+</html>
