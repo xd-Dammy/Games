@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0B0E14">
+<title>Pong — XD_Arcade</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/game-shared.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="game-body">
+<header class="game-header">
+  <a href="../../index.html" class="back-link">&larr; XD_Arcade</a>
+  <h1 class="game-title">Pong</h1>
+  <div class="mode-toggle">
+    <button class="mode-btn" data-lvl="easy">Easy</button>
+    <button class="mode-btn active" data-lvl="medium">Medium</button>
+    <button class="mode-btn" data-lvl="hard">Hard</button>
+  </div>
+</header>
+<main class="game-main">
+  <div class="scoreboard">
+    <div class="score-item"><span class="score-label">You</span><span class="score-val c4-a" id="youVal">0</span></div>
+    <div class="score-item"><span class="score-label">CPU</span><span class="score-val c4-b" id="cpuVal">0</span></div>
+    <div class="score-item"><span class="score-label">Record</span><span class="score-val" id="recVal">0-0</span></div>
+  </div>
+  <canvas id="cv" class="pong-canvas" width="320" height="440"></canvas>
+  <p class="turn-indicator" id="statusMsg">First to 7 wins. Drag to move, tap to serve.</p>
+</main>
+<script src="game.js"></script>
+</body>
+</html>
