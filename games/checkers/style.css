@@ -1,0 +1,12 @@
+.c4-a { color: var(--pink); } .c4-b { color: #c9ccd6; }
+.ck-board { display: grid; grid-template-columns: repeat(8, 1fr); width: min(94vw, 420px); aspect-ratio: 1/1; border: 3px solid #2a3040; border-radius: 8px; overflow: hidden; }
+.ck-sq { position: relative; border: none; padding: 0; background: #1a2030; display: flex; align-items: center; justify-content: center; cursor: default; }
+.ck-sq.light { background: #c9b99a; }
+.ck-sq.dark { background: #3b4a3a; cursor: pointer; }
+.ck-sq.sel { background: #4d6b4a; box-shadow: inset 0 0 0 3px var(--cyan); }
+.ck-sq.last { box-shadow: inset 0 0 0 3px rgba(255,210,61,.7); }
+.ck-sq.dest::after { content: ''; width: 28%; height: 28%; border-radius: 50%; background: rgba(61,220,255,.85); position: absolute; }
+.ck-sq.must { box-shadow: inset 0 0 0 3px var(--yellow); }
+.ck-piece { width: 78%; height: 78%; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: clamp(12px, 4vw, 20px); box-shadow: 0 2px 4px rgba(0,0,0,.6), inset 0 0 0 3px rgba(255,255,255,.18); }
+.ck-piece.r { background: radial-gradient(circle at 35% 30%, #ff7a9a, #d92a56); color: #ffe27a; }
+.ck-piece.b { background: radial-gradient(circle at 35% 30%, #4a4f60, #15181f); color: #ffe27a; }
