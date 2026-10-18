@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0B0E14">
+<title>Breakout — XD_Arcade</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/game-shared.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="game-body">
+<header class="game-header">
+  <a href="../../index.html" class="back-link">&larr; XD_Arcade</a>
+  <h1 class="game-title">Breakout</h1>
+</header>
+<main class="game-main">
+  <div class="scoreboard">
+    <div class="score-item"><span class="score-label">Score</span><span class="score-val" id="scoreVal">0</span></div>
+    <div class="score-item"><span class="score-label">Lives</span><span class="score-val" id="livesVal">3</span></div>
+    <div class="score-item"><span class="score-label">Level</span><span class="score-val" id="levelVal">1</span></div>
+    <div class="score-item"><span class="score-label">Best</span><span class="score-val" id="bestVal">0</span></div>
+  </div>
+  <canvas id="cv" class="bo-canvas" width="320" height="440"></canvas>
+  <p class="turn-indicator" id="statusMsg">Drag to move the paddle. Tap to launch.</p>
+</main>
+<script src="game.js"></script>
+</body>
+</html>
