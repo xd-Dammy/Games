@@ -1,0 +1,5 @@
+.flap-canvas, .bo-canvas {
+  width: min(92vw, 360px); aspect-ratio: 320/440; height: auto; touch-action: none;
+  background: #070A10; border: 1px solid var(--border); border-radius: 10px; display: block;
+  user-select: none; -webkit-user-select: none;
+}
