@@ -1,10 +1,11 @@
-const CACHE_NAME = 'xd-arcade-v4';
+const CACHE_NAME = 'xd-arcade-v8';
 const CORE_ASSETS = [
   './',
   './index.html',
   './css/style.css',
   './css/game-shared.css',
   './js/app.js',
+  './js/pause.js',
   './manifest.json',
   './games/tictactoe/index.html',
   './games/tictactoe/style.css',
@@ -42,7 +43,6 @@ const CORE_ASSETS = [
   './games/whack/index.html',
   './games/whack/style.css',
   './games/whack/game.js',
-  './games/runner3d/index.html',
   './games/hangman/index.html',
   './games/hangman/style.css',
   './games/hangman/game.js',
@@ -78,7 +78,13 @@ const CORE_ASSETS = [
   './games/chess/game.js',
   './scores/index.html',
   './scores/style.css',
-  './scores/game.js'
+  './scores/game.js',
+  './games/lagosrush/index.html',
+  './games/lagosrush/style.css',
+  './games/lagosrush/engine.js',
+  './games/lagosrush/art.js',
+  './games/lagosrush/game.js',
+  './assets/lagosrush-preview.jpg'
 ];
 
 self.addEventListener('install', (event) => {
