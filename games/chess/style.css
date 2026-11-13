@@ -1,0 +1,10 @@
+.c4-a { color: var(--pink); } .c4-b { color: #c9ccd6; }
+.ch-sq { position: relative; border: none; padding: 0; display: flex; align-items: center; justify-content: center; cursor: pointer; line-height: 1; }
+.ch-sq.dot::after { content: ''; position: absolute; width: 28%; height: 28%; border-radius: 50%; background: rgba(20,30,60,.45); }
+.ch-sq.cap::after { content: ''; position: absolute; inset: 4%; border-radius: 50%; border: 4px solid rgba(20,30,60,.45); background: none; width: auto; height: auto; }
+.ch-piece { pointer-events: none; font-family: "Segoe UI Symbol", "Noto Sans Symbols 2", "DejaVu Sans", sans-serif; }
+.ch-promo { display: flex; gap: 10px; }
+.ch-promo[hidden] { display: none; }
+.ch-promo button { width: 56px; height: 56px; font-size: 34px; border-radius: 10px; border: 1px solid var(--cyan); background: var(--bg-raised); color: var(--text); cursor: pointer; }
+
+/* board frame, wood squares, pieces: see css/boardkit.css */
