@@ -1,0 +1,7 @@
+.c4-a { color: var(--pink); } .c4-b { color: #c9ccd6; }
+
+.ck-sq { position: relative; border: none; padding: 0; display: flex; align-items: center; justify-content: center; cursor: default; }
+.ck-sq.dark { cursor: pointer; }
+.ck-sq.dest::after { content: ''; width: 28%; height: 28%; border-radius: 50%; position: absolute; }
+.ck-piece { border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffe27a; }
+/* board frame, wood squares, pieces: see css/boardkit.css */
