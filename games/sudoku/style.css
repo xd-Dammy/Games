@@ -1,0 +1,100 @@
+.sudoku-wrap {
+  position: relative;
+}
+
+.sudoku-board {
+  display: grid;
+  grid-template-columns: repeat(9, 32px);
+  grid-template-rows: repeat(9, 32px);
+  background: var(--border);
+  gap: 1px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.sudoku-cell {
+  background: var(--bg-raised);
+  border: none;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text);
+  transition: background 0.12s ease;
+}
+
+.sudoku-cell.given {
+  color: var(--text-dim);
+  cursor: default;
+}
+
+.sudoku-cell.selected {
+  background: rgba(61, 220, 255, 0.18);
+}
+
+.sudoku-cell.same-value {
+  background: rgba(61, 220, 255, 0.08);
+}
+
+.sudoku-cell.error {
+  color: var(--pink);
+}
+
+.sudoku-cell.peer {
+  background: #161b26;
+}
+
+/* Thicker borders every 3 cells for 3x3 boxes */
+.sudoku-cell:nth-child(3n) {
+  border-right: 2px solid var(--border);
+}
+.sudoku-cell:nth-child(9n) {
+  border-right: none;
+}
+.sudoku-row-thick {
+  border-bottom: 2px solid var(--border);
+}
+
+.numpad {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  max-width: 320px;
+  width: 100%;
+}
+
+.num-btn {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--cyan);
+  font-family: var(--font-display);
+  font-size: 18px;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.num-btn:active {
+  background: rgba(255, 61, 110, 0.2);
+  border-color: var(--pink);
+}
+
+.erase-btn {
+  grid-column: span 2;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-dim);
+}
+
+@media (max-width: 380px) {
+  .sudoku-board {
+    grid-template-columns: repeat(9, 30px);
+    grid-template-rows: repeat(9, 30px);
+  }
+}
