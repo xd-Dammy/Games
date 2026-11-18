@@ -1,0 +1,64 @@
+/* gamekit.css — shared by every game page: themed backgrounds, background picker, big bottom controls.
+   Loaded LAST so it wins over each game's own colours. Backgrounds are chosen with html[data-table], set by js/gamekit.js. */
+
+/* ---------- backgrounds ---------- */
+html { --table: #2a1745; --table-size: 560px 150px, 100% 100%; --table-rep: repeat-x, no-repeat; --table-pos: bottom, 0 0;
+  --table-img: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='560' height='150'%3E%3Cg fill='%2317102b'%3E%3Crect x='0' y='80' width='46' height='70'/%3E%3Crect x='46' y='50' width='38' height='100'/%3E%3Crect x='84' y='96' width='50' height='54'/%3E%3Crect x='134' y='30' width='34' height='120'/%3E%3Crect x='168' y='70' width='60' height='80'/%3E%3Crect x='228' y='104' width='40' height='46'/%3E%3Crect x='268' y='44' width='44' height='106'/%3E%3Crect x='312' y='84' width='52' height='66'/%3E%3Crect x='364' y='20' width='30' height='130'/%3E%3Crect x='394' y='62' width='56' height='88'/%3E%3Crect x='450' y='98' width='44' height='52'/%3E%3Crect x='494' y='56' width='66' height='94'/%3E%3C/g%3E%3Cg fill='%23ffd27a' opacity='.55'%3E%3Crect x='56' y='62' width='5' height='7'/%3E%3Crect x='66' y='84' width='5' height='7'/%3E%3Crect x='142' y='46' width='5' height='7'/%3E%3Crect x='150' y='80' width='5' height='7'/%3E%3Crect x='186' y='88' width='5' height='7'/%3E%3Crect x='282' y='60' width='5' height='7'/%3E%3Crect x='292' y='92' width='5' height='7'/%3E%3Crect x='372' y='40' width='5' height='7'/%3E%3Crect x='412' y='82' width='5' height='7'/%3E%3Crect x='512' y='76' width='5' height='7'/%3E%3Crect x='536' y='104' width='5' height='7'/%3E%3C/g%3E%3C/svg%3E"), linear-gradient(180deg, #2a1745 0%, #8a3a5c 58%, #f08a4b 100%); }
+html[data-table="oak"]    { --table: #8a5a2b; --table-size: auto, auto, auto; --table-rep: repeat, repeat, no-repeat; --table-pos: 0 0, 0 0, 0 0;
+  --table-img: repeating-linear-gradient(90deg, rgba(0,0,0,.28) 0 2px, transparent 2px 130px), repeating-linear-gradient(0deg, rgba(255,255,255,.045) 0 1px, transparent 1px 6px), linear-gradient(180deg, #9b6a38, #744a22); }
+html[data-table="dark"]   { --table: #2a1a10; --table-size: auto, auto, auto; --table-rep: repeat, repeat, no-repeat; --table-pos: 0 0, 0 0, 0 0;
+  --table-img: repeating-linear-gradient(90deg, rgba(0,0,0,.4) 0 2px, transparent 2px 130px), repeating-linear-gradient(0deg, rgba(255,255,255,.03) 0 1px, transparent 1px 6px), linear-gradient(180deg, #3a2517, #1f130b); }
+html[data-table="felt"]   { --table: #1f5a3a; --table-size: auto; --table-rep: no-repeat; --table-pos: 0 0;
+  --table-img: radial-gradient(ellipse at 50% 40%, #2c7a50 0, #1f5a3a 55%, #123a25 100%); }
+html[data-table="sunset"] { --table: #6a2a4a; --table-size: auto; --table-rep: no-repeat; --table-pos: 0 0;
+  --table-img: linear-gradient(160deg, #2f1c4a, #a03a4f 58%, #f08a4b); }
+html[data-table="ocean"]  { --table: #0b3a5c; --table-size: auto, auto; --table-rep: no-repeat, no-repeat; --table-pos: 0 0, 0 0;
+  --table-img: radial-gradient(circle at 18% 8%, rgba(90,210,255,.30), transparent 42%), linear-gradient(180deg, #0d4c78, #06182c); }
+html[data-table="neon"]   { --table: #0b0714; --table-size: 32px 32px, 32px 32px, auto; --table-rep: repeat, repeat, no-repeat; --table-pos: 0 0, 0 0, 0 0;
+  --table-img: linear-gradient(rgba(61,220,255,.10) 1px, transparent 1px), linear-gradient(90deg, rgba(255,61,110,.10) 1px, transparent 1px), radial-gradient(ellipse at 50% 0, #34115c, #0b0714 72%); }
+html[data-table="night"]  { --table: #0B0E14; --table-size: auto; --table-rep: no-repeat; --table-pos: 0 0; --table-img: none; }
+
+body.game-body { background-color: var(--table); background-image: var(--table-img); background-size: var(--table-size); background-repeat: var(--table-rep); background-position: var(--table-pos); }
+body.game-body .game-header { background: rgba(0,0,0,.34); border-bottom-color: rgba(255,255,255,.12); }
+body.game-body .scoreboard { background: rgba(0,0,0,.30); padding: 7px 20px; border-radius: 14px; }
+body.game-body .score-label, body.game-body .turn-indicator { text-shadow: 0 1px 2px rgba(0,0,0,.55); }
+html[data-table="night"] body.game-body .game-header { background: transparent; border-bottom-color: var(--border); }
+html[data-table="night"] body.game-body .scoreboard { background: transparent; padding: 0; }
+
+/* ---------- big controls, centred at the bottom (Snake, 2048, Blocks) ---------- */
+.touch-controls { margin-top: auto; padding: 4px 0 calc(6px + env(safe-area-inset-bottom)); display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.dpad-row { gap: 10px; }
+.dpad-btn { color: #3ddcff; width: 84px; height: 84px; font-size: 38px; line-height: 1; border-radius: 22px; background: rgba(18,22,31,.84); border: 2px solid rgba(255,255,255,.2); box-shadow: 0 5px 0 rgba(0,0,0,.45); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.dpad-btn:active { transform: translateY(3px); box-shadow: 0 2px 0 rgba(0,0,0,.45); }
+.bl-pad { margin-top: auto; width: min(96vw, 440px); gap: 10px; padding-bottom: calc(6px + env(safe-area-inset-bottom)); }
+.bl-pad button { color: #3ddcff; height: 74px; font-size: 32px; border-radius: 20px; background: rgba(18,22,31,.84); border: 2px solid rgba(255,255,255,.2); box-shadow: 0 5px 0 rgba(0,0,0,.45); }
+.bl-pad button:active { transform: translateY(3px); box-shadow: 0 2px 0 rgba(0,0,0,.45); }
+@media (max-height: 700px) { .dpad-btn { width: 70px; height: 70px; font-size: 32px; border-radius: 18px; } .bl-pad button { height: 62px; font-size: 28px; } }
+@media (min-width: 640px) and (pointer: coarse) { .touch-controls { display: flex; } }              /* tablets / phones turned sideways still get the big pad */
+@media (hover: hover) and (pointer: fine) { .touch-controls, .bl-pad { display: none; } .touch-controls { display: none; } }   /* desktop uses the keyboard */
+.bl-canvas { height: var(--fh, auto); width: auto; aspect-ratio: 1 / 2; max-width: 60vw; }
+
+/* ---------- background button + picker ---------- */
+.xd-bg-pill { margin-top: 2px; font: 600 12.5px 'Inter', system-ui, sans-serif; color: #F5F5F0; background: rgba(0,0,0,.42); border: 1px solid rgba(255,255,255,.2); border-radius: 999px; padding: 7px 16px; cursor: pointer; }
+.xd-bg-pill:hover { border-color: #FFD23D; }
+.bt-wrap { position: fixed; inset: 0; z-index: 99990; background: rgba(11,14,20,.72); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; padding: 14px; font-family: var(--font-body, 'Inter', system-ui, sans-serif); color: #F5F5F0; }
+.bt-wrap[hidden] { display: none; }
+.bt-card { width: min(440px, 100%); max-height: 100%; overflow-y: auto; background: #12161F; border: 1px solid #2a3040; border-radius: 18px; padding: 16px 16px 18px; box-shadow: 0 20px 60px rgba(0,0,0,.5); }
+.bt-head { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+.bt-head h2 { flex: 1; font-family: var(--font-display, 'Bebas Neue', Impact, sans-serif); font-weight: 400; font-size: 28px; letter-spacing: 2px; }
+.bt-x { width: 36px; height: 36px; border-radius: 50%; border: 1px solid #2a3040; background: #0B0E14; color: #F5F5F0; font-size: 16px; cursor: pointer; padding: 0; }
+.bt-card h3 { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: #8A8F9C; margin: 14px 0 8px; font-weight: 600; }
+.bt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(88px, 1fr)); gap: 8px; }
+.bt-opt { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 8px 6px; border-radius: 12px; border: 2px solid #2a3040; background: #0B0E14; color: #D9DBE0; font: 600 12px 'Inter', system-ui, sans-serif; cursor: pointer; }
+.bt-opt[aria-pressed="true"] { border-color: #FFD23D; color: #fff; }
+.bt-sw { width: 64px; height: 64px; border-radius: 8px; box-shadow: 0 0 0 1px rgba(0,0,0,.5); background-size: cover; background-position: bottom; }
+.bt-bd { display: grid; grid-template-columns: repeat(4, 1fr); overflow: hidden; padding: 0; }
+.bt-bd i { display: block; }
+.bt-hint { font-size: 12.5px; color: #8A8F9C; margin-top: 12px; }
+@media (max-width: 420px) { .bt-sw { width: 56px; height: 56px; } }
+
+/* readable status text on any background */
+body.game-body .turn-indicator { background: rgba(0,0,0,.34); color: #f5efe6; padding: 5px 14px; border-radius: 20px; min-height: 0; }
+html[data-table="night"] body.game-body .turn-indicator { background: transparent; padding: 0; }
+
+.flap-canvas, .bo-canvas { width: var(--bs, min(92vw, 360px)); }
