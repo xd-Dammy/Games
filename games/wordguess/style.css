@@ -1,0 +1,25 @@
+.wg-board { display: grid; grid-template-rows: repeat(6, 1fr); gap: 6px; width: min(70vw, 280px); }
+.wg-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.wg-row.shake { animation: wgshake .35s ease; }
+@keyframes wgshake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
+.wg-tile {
+  aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: clamp(24px, 8vw, 34px);
+  background: var(--bg-raised); border: 2px solid var(--border); border-radius: 6px;
+  text-transform: uppercase; transition: transform .25s ease, background .25s ease;
+}
+.wg-tile.filled { border-color: var(--text-dim); transform: scale(1.04); }
+.wg-tile.correct { background: #1f9d55; border-color: #1f9d55; }
+.wg-tile.present { background: #c99a10; border-color: #c99a10; }
+.wg-tile.absent  { background: #2a3040; border-color: #2a3040; color: var(--text-dim); }
+.wg-kb { display: flex; flex-direction: column; gap: 6px; width: min(98vw, 440px); }
+.wg-kb-row { display: flex; justify-content: center; gap: 5px; }
+.wg-key {
+  flex: 1; max-width: 42px; height: 48px; border: none; border-radius: 6px; cursor: pointer;
+  background: #232838; color: var(--text); font-family: var(--font-body); font-weight: 700; font-size: 14px;
+  text-transform: uppercase;
+}
+.wg-key.wide { flex: 1.6; max-width: 66px; font-size: 11px; }
+.wg-key.correct { background: #1f9d55; }
+.wg-key.present { background: #c99a10; }
+.wg-key.absent  { background: #12161F; color: var(--text-dim); }
